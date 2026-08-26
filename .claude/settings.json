@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(./raw/**)",
+      "Read(./wiki/**)",
+      "Edit(./wiki/**)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git log *)",
+      "Bash(git status)",
+      "Bash(git push *)"
+    ]
+  }
+}
