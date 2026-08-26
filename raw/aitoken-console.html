@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/png;base64,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" type="image/png">
+<title>AI Token 业务管理台 · SpaceTiD</title>
+<style>
+:root{
+  --plane:#060f12; --surface:#0b1417; --surface2:#121f24; --line:#1c2d33; --line2:#273c44;
+  --tx:#ffffff; --tx2:#b9c6ca; --tx3:#7d9199;
+  /* 图表分类色：固定槽位顺序，已通过 CVD 校验，不得调换或循环 */
+  --s1:#189daf; --s2:#d95926; --s3:#8f84e8; --s4:#6aa636; --s5:#d55181; --s6:#c98500;
+  --brand:#189daf; --brand-lt:#2bc4da;
+  --good:#3fb950; --warn:#e0a33e; --serious:#ec835a; --crit:#e05252;
+  --grid:#1c2d33; --axis:#273c44;
+  --grad:linear-gradient(115deg,#060f12 0%,#0d3742 42%,#12707d 70%,#4a9c3a 100%);
+  --r:6px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--plane);color:var(--tx);
+  font-family:Inter,Helvetica,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  font-size:14px;line-height:1.65;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font-family:inherit;font-size:inherit}
+#app{display:flex;min-height:100vh}
+
+/* ---------- sidebar ---------- */
+#side{width:236px;flex:0 0 236px;background:var(--surface);border-right:1px solid var(--line);
+  height:100vh;position:sticky;top:0;display:flex;flex-direction:column}
+#logo{padding:20px 18px 16px;border-bottom:1px solid var(--line)}
+#logo b{font-size:14px;letter-spacing:.3px;display:block}
+#logo span{font-size:11px;color:var(--tx3)}
+#menu{padding:10px 10px;flex:1;overflow-y:auto}
+.mi{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:var(--r);cursor:pointer;
+  color:var(--tx2);font-size:13.5px;border-left:2px solid transparent}
+.mi:hover{background:var(--surface2);color:var(--tx)}
+.mi.on{background:var(--surface2);color:var(--tx);border-left-color:var(--brand)}
+.mi i{font-style:normal;width:18px;text-align:center;opacity:.85}
+#sfoot{padding:12px 16px;border-top:1px solid var(--line);font-size:11px;color:var(--tx3)}
+
+/* ---------- main ---------- */
+#main{flex:1;min-width:0;max-width:1440px}
+h2.page{font-size:20px;margin:0 0 4px;letter-spacing:-.2px}
+p.sub{margin:0 0 22px;color:var(--tx3);font-size:13px}
+.view{display:none}
+.view.on{display:block}
+
+/* ---------- cards ---------- */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-bottom:16px}
+.card>h3{margin:0 0 2px;font-size:14px;font-weight:600}
+.card>p.cap{margin:0 0 16px;font-size:12px;color:var(--tx3)}
+.grid{display:grid;gap:14px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:1200px){.g4{grid-template-columns:repeat(2,1fr)}.g3,.g2{grid-template-columns:1fr}}
+
+/* ---------- stat tiles ---------- */
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.tile .lbl{font-size:12px;color:var(--tx3);margin-bottom:6px}
+.tile .val{font-size:26px;font-weight:600;letter-spacing:-.5px;line-height:1.2}
+.tile .val small{font-size:14px;color:var(--tx2);font-weight:400;margin-left:2px}
+.tile .dl{font-size:12px;margin-top:5px;display:flex;align-items:center;gap:5px;color:var(--tx3)}
+.up{color:var(--good)} .down{color:var(--crit)}
+.tile svg{margin-top:8px;display:block}
+
+/* ---------- table ---------- */
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{text-align:left;padding:9px 12px;color:var(--tx2);font-weight:600;
+  border-bottom:1px solid var(--line2);white-space:nowrap;font-size:12px}
+td{padding:9px 12px;border-bottom:1px solid var(--line);color:var(--tx2);
+  font-variant-numeric:tabular-nums}
+tbody tr:hover td{background:var(--surface2)}
+td.num,th.num{text-align:right}
+td b{color:var(--tx);font-weight:600}
+.tw{overflow-x:auto}
+
+/* ---------- chips ---------- */
+.chip{display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:20px;
+  font-size:11.5px;border:1px solid var(--line2);color:var(--tx2);white-space:nowrap}
+.chip.good{border-color:rgba(63,185,80,.45);color:#67d178}
+.chip.warn{border-color:rgba(224,163,62,.5);color:#eec078}
+.chip.serious{border-color:rgba(236,131,90,.45);color:#f0a183}
+.chip.crit{border-color:rgba(224,82,82,.55);color:#ef8686}
+.chip .dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex:0 0 7px}
+
+/* ---------- forms ---------- */
+label.f{display:block;font-size:12px;color:var(--tx3);margin:0 0 5px}
+input.f,select.f{width:100%;padding:8px 11px;background:var(--surface2);border:1px solid var(--line2);
+  border-radius:var(--r);color:var(--tx);outline:none;font-variant-numeric:tabular-nums}
+input.f:focus,select.f:focus{border-color:var(--brand)}
+.fr{margin-bottom:13px}
+.btn{white-space:nowrap;padding:8px 16px;border-radius:var(--r);border:1px solid var(--line2);background:var(--surface2);
+  color:var(--tx);cursor:pointer}
+.btn:hover{border-color:var(--brand)}
+.btn.pri{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:500}
+.btn.pri:hover{filter:brightness(1.1)}
+.btn.sm{padding:4px 10px;font-size:12px;border-radius:6px}
+.btn.dg{color:#ef8686;border-color:rgba(224,82,82,.45)}
+.bar{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.bar .sp{flex:1}
+
+/* ---------- chart ---------- */
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 12px;font-size:12px;color:var(--tx2)}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:6px;vertical-align:-1px}
+.chartbox{position:relative}
+#tip{position:fixed;pointer-events:none;background:#000;border:1px solid var(--line2);
+  border-radius:var(--r);padding:9px 12px;font-size:12px;color:var(--tx);z-index:99;display:none;
+  box-shadow:0 8px 28px rgba(0,0,0,.6);font-variant-numeric:tabular-nums;max-width:260px}
+#tip .th{color:var(--tx3);font-size:11px;margin-bottom:5px}
+#tip .tr{display:flex;justify-content:space-between;gap:16px}
+#tip .tr i{width:9px;height:9px;border-radius:2px;display:inline-block;margin-right:6px}
+.tvw{display:none;margin-top:14px}
+.tvw.on{display:block}
+.tglt{background:none;border:none;color:var(--tx3);font-size:11.5px;cursor:pointer;
+  text-decoration:underline;text-underline-offset:3px;padding:0}
+.tglt:hover{color:var(--brand-lt)}
+
+/* ---------- misc ---------- */
+.hero{font-size:44px;font-weight:600;letter-spacing:-1.2px;line-height:1.1}
+.note{background:var(--surface2);border-left:2px solid var(--brand);border-radius:0 8px 8px 0;
+  padding:11px 15px;font-size:12.5px;color:var(--tx2);margin:14px 0}
+.note b{color:var(--tx)}
+.kv{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}
+.kv:last-child{border-bottom:none}
+.kv span{color:var(--tx3)} .kv b{font-variant-numeric:tabular-nums}
+.big{font-size:17px}
+.mono{font-variant-numeric:tabular-nums}
+.empty{padding:30px;text-align:center;color:var(--tx3);font-size:13px}
+
+/* ---------- 品牌页眉与 Hero ---------- */
+#logo{padding:20px 18px 16px;border-bottom:1px solid var(--line)}
+#mark{display:block;width:max-content;margin:0 0 12px -5px;padding:3px 5px;
+  text-decoration:none;transition:.15s;border-radius:var(--r)}
+#mark img{width:138px;display:block;transition:.15s}
+#mark[href]{cursor:pointer} #mark:not([href]){cursor:default}
+#mark[href]:hover{background:var(--surface2)}
+#mark[href]:hover img{opacity:.8}
+#hero{background:var(--grad);padding:32px 34px 28px;position:relative}
+#hero .kicker{font-size:11px;letter-spacing:3px;color:rgba(255,255,255,.7);
+  text-transform:uppercase;margin-bottom:8px}
+#hero h2{margin:0;font-size:27px;font-weight:700;color:#fff;letter-spacing:.5px;line-height:1.3}
+#hero p{margin:9px 0 0;font-size:13px;color:rgba(255,255,255,.78);max-width:720px}
+#hero .cls{position:absolute;top:20px;right:26px;font-size:11px;letter-spacing:1.5px;
+  color:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.28);
+  border-radius:var(--r);padding:3px 11px}
+#content{padding:24px 34px 60px}
+#pfoot{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:11.5px;color:var(--tx3);line-height:1.9;display:flex;
+  justify-content:space-between;gap:20px;flex-wrap:wrap}
+#pfoot b{color:var(--tx2);font-weight:600}
+@media(max-width:900px){#hero{padding:26px 20px 22px}#hero h2{font-size:22px}#content{padding:20px 20px 50px}}
+</style>
+</head>
+<body>
+<div id="tip"></div>
+<div id="app">
+  <aside id="side">
+    <div id="logo">
+      <a id="mark" href="/" title="返回主页">
+        <img src="data:image/png;base64,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" alt="SpaceTiD">
+      </a>
+      <b style="font-size:13.5px;display:block;color:var(--tx)">AI Token 业务管理台</b>
+      <span style="font-size:11px;color:var(--tx3)">渠道代理 · 聚合网关 · 额度分销</span>
+    </div>
+    <nav id="menu"></nav>
+    <div id="sfoot"><a href="/__logs" style="color:var(--ac,#2bc4da);text-decoration:none">访问审计 →</a><br>v1.0 · 演示数据<br>数据存于内存，请用「数据」页导出</div>
+  </aside>
+  <main id="main">
+    <div id="hero">
+      <div class="cls">内部机密</div>
+      <div class="kicker" id="hkick">Operations Console</div>
+      <h2 id="htitle">总览看板</h2>
+      <p id="hsub"></p>
+    </div>
+    <div id="content"></div>
+  </main>
+</div>
+
+<script>
+/* ==========================================================================
+   1. 数据层（内存态 + JSON 导入导出，不使用浏览器存储）
+   ========================================================================== */
+const CT = {startup:'AI创业公司', enterprise:'中大型企业', smb:'中小企业/开发者', channel:'代理商'};
+const CT_COLOR = {startup:'--s1', enterprise:'--s2', smb:'--s3', channel:'--s4'};
+const STAGES = ['线索','需求诊断','POC验证','商务成交','交付上线','客户成功'];
+const SI = {low:{n:'低',r:.01}, mid:{n:'中',r:.05}, high:{n:'高',r:.15}};
+
+let DB = {
+  // costRatio：各月采购成本占收入比。随上游阶梯折扣提升与价值层客户占比上升而逐月下降。
+  meta:{ techRate:0.03, riskRate:0.02, updated:'2026-07-27',
+         costRatio:[0.868,0.860,0.851,0.842,0.828,0.814] },
+  // 上游官方参考价（元/百万token），采集日 2026-07-27
+  models:[
+    {id:'ds4',   name:'DeepSeek V4',    vendor:'DeepSeek', pin:0.5, pout:2,  pcache:0.1,  buy:0.80, sell:0.92},
+    {id:'qwt',   name:'通义千问 Turbo',  vendor:'阿里云',   pin:0.8, pout:2,  pcache:0.16, buy:0.82, sell:0.93},
+    {id:'qwm',   name:'通义千问 Max',    vendor:'阿里云',   pin:5,   pout:15, pcache:1.0,  buy:0.78, sell:0.92},
+    {id:'ywsp',  name:'文心一言 Speed',  vendor:'百度',     pin:0.3, pout:0.6,pcache:0.06, buy:0.85, sell:0.95},
+    {id:'yw4',   name:'文心一言 4.0',    vendor:'百度',     pin:3,   pout:9,  pcache:0.6,  buy:0.80, sell:0.92},
+    {id:'glmp',  name:'智谱 GLM-Plus',   vendor:'智谱',     pin:5,   pout:15, pcache:1.0,  buy:0.79, sell:0.92},
+    {id:'glmf',  name:'智谱 GLM-Flash',  vendor:'智谱',     pin:0,   pout:0,  pcache:0,    buy:1.00, sell:1.00}
+  ],
+  customers:[
+    {id:1,name:'启言智能',      type:'startup',   scene:'多Agent工作流', rev:52000, cost:45240, si:'mid',  m:[31,36,40,44,48,52], owner:'李衡', note:'增长快，关注熔断配置'},
+    {id:2,name:'恒信保险科技',   type:'enterprise',scene:'智能客服',     rev:186000,cost:126480,si:'high', m:[0,0,90,140,168,186], owner:'李衡', note:'价值层打包定价（SLA+管控+优化服务）'},
+    {id:3,name:'砚台文档',      type:'startup',   scene:'文档问答',     rev:31000, cost:26350, si:'low',  m:[18,21,24,27,29,31], owner:'周琳', note:'缓存优化后成本降38%'},
+    {id:4,name:'云梯软件',      type:'channel',   scene:'白标转售',     rev:124000,cost:106000,si:'mid',  m:[42,58,71,89,106,124],owner:'渠道部',note:'一级代理，月结'},
+    {id:5,name:'黎明制造集团',   type:'enterprise',scene:'研发助手',     rev:98000, cost:86200, si:'high', m:[0,0,0,52,74,98],   owner:'吴迪', note:'⚠ 高服务强度吞掉全部毛利，需转自助或提价'},
+    {id:6,name:'小舟工作室',    type:'smb',       scene:'内容生成',     rev:4200,  cost:3780,  si:'low',  m:[2.1,2.6,3.0,3.4,3.9,4.2],owner:'自助',note:'自助注册'},
+    {id:7,name:'知微数据',      type:'startup',   scene:'数据分析',     rev:27000, cost:24900, si:'high', m:[22,26,29,31,29,27], owner:'周琳', note:'⚠ 连续两月用量下降'},
+    {id:8,name:'南岭政务云',    type:'enterprise',scene:'公文辅助',     rev:64000, cost:55000, si:'mid',  m:[0,0,0,0,38,64],    owner:'吴迪', note:'私有化网关部署'},
+    {id:9,name:'橙码科技',      type:'channel',   scene:'区域分销',     rev:41000, cost:35000, si:'mid',  m:[9,14,21,28,35,41], owner:'渠道部',note:'二级代理'},
+    {id:10,name:'个人开发者池',  type:'smb',       scene:'混合',        rev:18600, cost:16700, si:'low',  m:[7,9,11,14,16,18.6],owner:'自助',note:'约 240 个账号汇总'}
+  ],
+  deals:[
+    {id:1,name:'方舟游戏 · NPC对话',   type:'startup',   stage:1, amt:80000, owner:'李衡', next:'8/1 首次深度沟通'},
+    {id:2,name:'华瑞银行 · 智能投顾',   type:'enterprise',stage:1, amt:600000,owner:'吴迪', next:'8/3 需求调研会'},
+    {id:3,name:'明创医疗 · 病历结构化', type:'enterprise',stage:2, amt:320000,owner:'吴迪', next:'8/5 出诊断纪要'},
+    {id:4,name:'风语电商 · 商品文案',   type:'startup',   stage:2, amt:120000,owner:'周琳', next:'7/30 确认场景'},
+    {id:5,name:'蓝鲸SaaS · 白标合作',   type:'channel',   stage:3, amt:450000,owner:'渠道部',next:'POC第二周，出优化报告'},
+    {id:6,name:'鼎新集团 · 研发助手',   type:'enterprise',stage:3, amt:880000,owner:'吴迪', next:'压测中'},
+    {id:7,name:'点墨科技 · 长文摘要',   type:'startup',   stage:4, amt:150000,owner:'周琳', next:'合同法务审核'},
+    {id:8,name:'启言智能 · 扩量',      type:'startup',   stage:5, amt:200000,owner:'李衡', next:'灰度50%'},
+    {id:9,name:'南岭政务云 · 二期',    type:'enterprise',stage:6, amt:260000,owner:'吴迪', next:'首月复盘已完成'}
+  ],
+  orders:[
+    {id:'R2607-018',cust:'恒信保险科技',date:'2026-07-24',amt:200000,type:'充值',pay:'对公转账',inv:'专票已开'},
+    {id:'R2607-017',cust:'云梯软件',    date:'2026-07-22',amt:150000,type:'代理进货',pay:'月结',inv:'待开'},
+    {id:'R2607-015',cust:'黎明制造集团',date:'2026-07-19',amt:120000,type:'充值',pay:'对公转账',inv:'专票已开'},
+    {id:'R2607-012',cust:'启言智能',    date:'2026-07-15',amt:60000, type:'充值',pay:'在线支付',inv:'普票已开'},
+    {id:'R2607-009',cust:'南岭政务云',  date:'2026-07-11',amt:80000, type:'充值',pay:'对公转账',inv:'专票已开'},
+    {id:'R2607-006',cust:'砚台文档',    date:'2026-07-08',amt:40000, type:'充值',pay:'在线支付',inv:'普票已开'},
+    {id:'R2607-003',cust:'橙码科技',    date:'2026-07-03',amt:50000, type:'代理进货',pay:'预付',inv:'专票已开'}
+  ],
+  agents:[
+    {id:1,name:'云梯软件',  tier:'战略伙伴',q:450000,rate:0.22,cust:14,settled:'2026-07-05',status:'正常'},
+    {id:2,name:'橙码科技',  tier:'授权代理',q:160000,rate:0.15,cust:7, settled:'2026-07-05',status:'正常'},
+    {id:3,name:'合泰信息',  tier:'授权代理',q:88000, rate:0.13,cust:5, settled:'2026-07-05',status:'正常'},
+    {id:4,name:'速达网络',  tier:'注册代理',q:23000, rate:0.08,cust:3, settled:'2026-07-05',status:'观察'},
+    {id:5,name:'木石工作室',tier:'注册代理',q:9000,  rate:0.08,cust:2, settled:'2026-07-05',status:'观察'}
+  ],
+  months:['2026-02','2026-03','2026-04','2026-05','2026-06','2026-07']
+};
+
+/* ==========================================================================
+   2. 计算层
+   ========================================================================== */
+const fmtY = n => '¥' + Math.round(n).toLocaleString('zh-CN');
+const fmtK = n => n>=10000 ? (n/10000).toFixed(1)+'万' : Math.round(n).toLocaleString('zh-CN');
+const pct = n => (n*100).toFixed(1) + '%';
+
+// 单客户贡献毛利
+function contrib(c){
+  const gross = c.rev - c.cost;
+  const tech  = c.rev * DB.meta.techRate;
+  const serv  = c.rev * SI[c.si].r;
+  const risk  = c.rev * DB.meta.riskRate;
+  const cm    = gross - tech - serv - risk;
+  return {gross, gm: c.rev? gross/c.rev:0, tech, serv, risk, cm, cmr: c.rev? cm/c.rev:0};
+}
+// 健康度判定（对应知识库模块04）
+function health(r){
+  if(r>0.20) return {k:'优质', cls:'good',    act:'重点维护，争取扩量与增值服务'};
+  if(r>0.10) return {k:'健康', cls:'good',    act:'正常服务，寻找优化空间'};
+  if(r>0.03) return {k:'薄利', cls:'warn',    act:'降低服务强度，引导自助化'};
+  if(r>0)    return {k:'临界', cls:'serious', act:'提价或缩减服务，限期改善'};
+  return           {k:'失血', cls:'crit',     act:'三个月内改善或主动退出'};
+}
+function approval(gm){
+  if(gm>=0.15) return '销售自主';
+  if(gm>=0.10) return '销售主管审批';
+  if(gm>=0.08) return '业务负责人审批';
+  return '决策层审批（需战略理由）';
+}
+// 汇总
+function totals(){
+  const rev = DB.customers.reduce((s,c)=>s+c.rev,0);
+  const cost= DB.customers.reduce((s,c)=>s+c.cost,0);
+  let cm=0; DB.customers.forEach(c=>cm+=contrib(c).cm);
+  const byType = {};
+  Object.keys(CT).forEach(k=>byType[k]=0);
+  DB.customers.forEach(c=>byType[c.type]+=c.rev);
+  // 月度序列
+  const last = DB.months.length-1;
+  const series = DB.months.map((m,i)=>{
+    const r = DB.customers.reduce((s,c)=>s+(c.m[i]||0),0)*1000;
+    // 当期月份用真实成本口径；历史月份用记录的成本占比
+    const ratio = i===last ? (rev? cost/rev : .87)
+                           : (DB.meta.costRatio && DB.meta.costRatio[i]!=null ? DB.meta.costRatio[i] : .87);
+    return {m, rev:r, cost:r*ratio, gross:r*(1-ratio)};
+  });
+  return {rev, cost, gross:rev-cost, gm: rev?(rev-cost)/rev:0, cm, cmr: rev?cm/rev:0, byType, series};
+}
+// 风险扫描（对应知识库模块04/05/08 的红线）
+function risks(){
+  const t = totals(); const out=[];
+  DB.customers.forEach(c=>{
+    const k = contrib(c);
+    if(k.cmr<=0) out.push({lv:'crit',t:`${c.name} 贡献毛利为负`,d:`贡献毛利率 ${pct(k.cmr)}，服务强度「${SI[c.si].n}」。按模块04应限期改善或主动退出。`});
+    else if(k.cmr<0.03) out.push({lv:'serious',t:`${c.name} 贡献毛利临界`,d:`贡献毛利率 ${pct(k.cmr)}，建议提价或降低服务强度。`});
+    if(t.rev && c.rev/t.rev>0.15) out.push({lv:'warn',t:`${c.name} 收入集中度过高`,d:`占总收入 ${pct(c.rev/t.rev)}，超过 15% 红线，该客户已具备定价权。`});
+    const n=c.m.length;
+    if(n>=3 && c.m[n-1]<c.m[n-3]*0.7 && c.m[n-3]>0) out.push({lv:'serious',t:`${c.name} 用量持续下降`,d:`近两月降幅超 30%，属流失预警信号，需 48 小时内直接联系对接人。`});
+  });
+  Object.keys(CT).forEach(k=>{
+    if(t.rev && t.byType[k]/t.rev>0.40)
+      out.push({lv:'warn',t:`客户结构失衡：${CT[k]}`,d:`占总收入 ${pct(t.byType[k]/t.rev)}，超过 40% 上限，抗风险能力不足。`});
+  });
+  const ar = DB.agents.reduce((s,a)=>s+a.q,0);
+  DB.agents.forEach(a=>{ if(ar && a.q/ar>0.20)
+    out.push({lv:'warn',t:`渠道依赖：${a.name}`,d:`占渠道采购 ${pct(a.q/ar)}，超过 20% 上限，存在带客迁移风险。`}); });
+  const order = {crit:0,serious:1,warn:2};
+  return out.sort((a,b)=>order[a.lv]-order[b.lv]);
+}
+
+/* ==========================================================================
+   3. 图表层（原生 SVG；遵循细笔触 / 2px 间隙 / 悬停提示 / 表格视图）
+   ========================================================================== */
+const CV = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const tip = document.getElementById('tip');
+function showTip(e, html){
+  tip.innerHTML = html; tip.style.display='block';
+  const r = tip.getBoundingClientRect();
+  let x = e.clientX+14, y = e.clientY-10;
+  if(x+r.width>innerWidth-10) x = e.clientX-r.width-14;
+  if(y+r.height>innerHeight-10) y = innerHeight-r.height-10;
+  tip.style.left=x+'px'; tip.style.top=Math.max(10,y)+'px';
+}
+const hideTip = ()=> tip.style.display='none';
+const esc = s => String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const svgEl = (t,a)=>{const e=document.createElementNS('http://www.w3.org/2000/svg',t);
+  for(const k in a) e.setAttribute(k,a[k]); return e;};
+
+/* 堆叠柱：成本 + 毛利 = 收入。段间 2px 表面间隙，数据端 4px 圆角。 */
+function stackedColumn(host, data, ser){
+  host.innerHTML='';
+  const W = host.clientWidth||760, H = 250, PL=54, PR=14, PT=14, PB=30;
+  const iw = W-PL-PR, ih = H-PT-PB;
+  const max = Math.max(...data.map(d=>ser.reduce((s,k)=>s+d[k.key],0)))*1.12 || 1;
+  const svg = svgEl('svg',{width:'100%',height:H,viewBox:`0 0 ${W} ${H}`});
+  // 网格：实线细发丝
+  const ticks=4;
+  for(let i=0;i<=ticks;i++){
+    const y = PT+ih-ih*i/ticks;
+    svg.appendChild(svgEl('line',{x1:PL,x2:W-PR,y1:y,y2:y,stroke:CV('--grid'),'stroke-width':1}));
+    const tl = svgEl('text',{x:PL-9,y:y+4,'text-anchor':'end',fill:CV('--tx3'),
+      'font-size':10.5,'font-variant-numeric':'tabular-nums'});
+    tl.textContent = fmtK(max*i/ticks); svg.appendChild(tl);
+  }
+  svg.appendChild(svgEl('line',{x1:PL,x2:W-PR,y1:PT+ih,y2:PT+ih,stroke:CV('--axis'),'stroke-width':1}));
+  const step = iw/data.length, bw = Math.min(46, step*0.54);
+  data.forEach((d,i)=>{
+    const cx = PL+step*i+step/2, x = cx-bw/2;
+    let acc = 0;
+    ser.forEach((s,si)=>{
+      const v = d[s.key]; if(v<=0) return;
+      const h = ih*v/max;
+      const y = PT+ih-h-acc;
+      // 段间 2px 表面间隙（非上层段扣掉 2px）
+      const gap = si<ser.length-1 ? 2 : 0;
+      const isTop = si===ser.length-1;
+      const r = isTop ? 4 : 0;
+      const hh = Math.max(1,h-gap);
+      const p = svgEl('path',{d:roundTop(x, y+gap, bw, hh, r), fill:CV(s.color)});
+      p.style.cursor='pointer';
+      p.addEventListener('mousemove',e=>{
+        const tot = ser.reduce((t,k)=>t+d[k.key],0);
+        showTip(e, `<div class="th">${esc(d.m)}</div>`+
+          ser.map(k=>`<div class="tr"><span><i style="background:${CV(k.color)}"></i>${k.name}</span><b>${fmtY(d[k.key])}</b></div>`).join('')+
+          `<div class="tr" style="margin-top:5px;padding-top:5px;border-top:1px solid #333"><span>收入合计</span><b>${fmtY(tot)}</b></div>`+
+          `<div class="tr"><span>毛利率</span><b>${pct(tot?d.gross/tot:0)}</b></div>`);
+      });
+      p.addEventListener('mouseleave',hideTip);
+      svg.appendChild(p);
+      acc += h;
+    });
+    const xl = svgEl('text',{x:cx,y:H-9,'text-anchor':'middle',fill:CV('--tx3'),
+      'font-size':10.5,'font-variant-numeric':'tabular-nums'});
+    xl.textContent = d.m.slice(5); svg.appendChild(xl);
+  });
+  host.appendChild(svg);
+}
+function roundTop(x,y,w,h,r){
+  r = Math.min(r,w/2,h);
+  return `M${x},${y+h} L${x},${y+r} Q${x},${y} ${x+r},${y} L${x+w-r},${y} Q${x+w},${y} ${x+w},${y+r} L${x+w},${y+h} Z`;
+}
+
+/* 折线：单序列毛利率，端点直标 */
+function lineChart(host, data, key, color, fmt){
+  host.innerHTML='';
+  const W = host.clientWidth||760, H=190, PL=48, PR=54, PT=16, PB=28;
+  const iw=W-PL-PR, ih=H-PT-PB;
+  const vs = data.map(d=>d[key]);
+  const lo = Math.min(...vs)*0.9, hi = Math.max(...vs)*1.1 || 1;
+  const X = i => PL+iw*i/Math.max(1,data.length-1);
+  const Y = v => PT+ih-ih*(v-lo)/((hi-lo)||1);
+  const svg = svgEl('svg',{width:'100%',height:H,viewBox:`0 0 ${W} ${H}`});
+  for(let i=0;i<=3;i++){
+    const y=PT+ih-ih*i/3;
+    svg.appendChild(svgEl('line',{x1:PL,x2:W-PR,y1:y,y2:y,stroke:CV('--grid'),'stroke-width':1}));
+    const t=svgEl('text',{x:PL-9,y:y+4,'text-anchor':'end',fill:CV('--tx3'),'font-size':10.5,
+      'font-variant-numeric':'tabular-nums'});
+    t.textContent=fmt(lo+(hi-lo)*i/3); svg.appendChild(t);
+  }
+  svg.appendChild(svgEl('polyline',{points:data.map((d,i)=>`${X(i)},${Y(d[key])}`).join(' '),
+    fill:'none',stroke:CV(color),'stroke-width':2,'stroke-linejoin':'round','stroke-linecap':'round'}));
+  data.forEach((d,i)=>{
+    const c = svgEl('circle',{cx:X(i),cy:Y(d[key]),r:4.5,fill:CV(color),
+      stroke:CV('--surface'),'stroke-width':2});
+    const hit = svgEl('circle',{cx:X(i),cy:Y(d[key]),r:14,fill:'transparent'});
+    hit.style.cursor='pointer';
+    hit.addEventListener('mousemove',e=>showTip(e,
+      `<div class="th">${esc(d.m)}</div><div class="tr"><span><i style="background:${CV(color)}"></i>毛利率</span><b>${fmt(d[key])}</b></div>`));
+    hit.addEventListener('mouseleave',hideTip);
+    svg.appendChild(c); svg.appendChild(hit);
+    const xl=svgEl('text',{x:X(i),y:H-8,'text-anchor':'middle',fill:CV('--tx3'),'font-size':10.5,
+      'font-variant-numeric':'tabular-nums'});
+    xl.textContent=d.m.slice(5); svg.appendChild(xl);
+  });
+  // 端点直标（选择性直标，非每点标注）
+  const last=data[data.length-1];
+  const el=svgEl('text',{x:X(data.length-1)+11,y:Y(last[key])+4,fill:CV('--tx2'),'font-size':12,
+    'font-weight':600,'font-variant-numeric':'tabular-nums'});
+  el.textContent=fmt(last[key]); svg.appendChild(el);
+  host.appendChild(svg);
+}
+
+/* 水平堆叠条：客户结构占比 */
+function stackedBarH(host, items, total){
+  host.innerHTML='';
+  const W=host.clientWidth||760, H=54, R=8;
+  const svg=svgEl('svg',{width:'100%',height:H,viewBox:`0 0 ${W} ${H}`});
+  let x=0;
+  items.forEach((it,i)=>{
+    const w = total? (W*it.v/total) : 0;
+    const ww = Math.max(0, w - (i<items.length-1?2:0)); // 2px 表面间隙
+    if(ww<=0) return;
+    const first=i===0, last=i===items.length-1;
+    const p=svgEl('path',{d:roundSide(x,10,ww,26,R,first,last),fill:CV(it.color)});
+    p.style.cursor='pointer';
+    p.addEventListener('mousemove',e=>showTip(e,
+      `<div class="th">客户结构</div><div class="tr"><span><i style="background:${CV(it.color)}"></i>${it.name}</span><b>${fmtY(it.v)}</b></div>`+
+      `<div class="tr"><span>占比</span><b>${pct(total?it.v/total:0)}</b>`+
+      (total&&it.v/total>0.4?`</div><div class="tr" style="color:#f6c85a">⚠ 超过 40% 上限`:'')+`</div>`));
+    p.addEventListener('mouseleave',hideTip);
+    svg.appendChild(p);
+    // 仅在放得下时做段内直标，否则交给图例与表格视图
+    const share = total? it.v/total : 0;
+    if(ww>52){
+      const t=svgEl('text',{x:x+ww/2,y:27,'text-anchor':'middle',fill:'#fff','font-size':11,
+        'font-weight':600});
+      t.textContent=pct(share); svg.appendChild(t);
+    }
+    x += w;
+  });
+  host.appendChild(svg);
+}
+function roundSide(x,y,w,h,r,l,rt){
+  r=Math.min(r,w/2,h/2);
+  const rl=l?r:0, rr=rt?r:0;
+  return `M${x+rl},${y} L${x+w-rr},${y} Q${x+w},${y} ${x+w},${y+rr} L${x+w},${y+h-rr} Q${x+w},${y+h} ${x+w-rr},${y+h} L${x+rl},${y+h} Q${x},${y+h} ${x},${y+h-rl} L${x},${y+rl} Q${x},${y} ${x+rl},${y} Z`;
+}
+
+/* 迷你走势线（统计磁贴内） */
+function spark(vals, color, w=150, h=30){
+  const lo=Math.min(...vals), hi=Math.max(...vals), rg=(hi-lo)||1;
+  const pts=vals.map((v,i)=>`${(w*i/Math.max(1,vals.length-1)).toFixed(1)},${(h-2-(h-4)*(v-lo)/rg).toFixed(1)}`).join(' ');
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><polyline points="${pts}" fill="none"
+    stroke="${CV(color)}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>`;
+}
+
+/* 漏斗：有序刻度 → 单色阶梯（暗色下不深于 step600） */
+const ORD = ['#cde2fb','#9ec5f4','#6da7ec','#3987e5','#256abf','#184f95'];
+function funnel(host, rows){
+  host.innerHTML='';
+  const W=host.clientWidth||700, rowH=44, H=rows.length*rowH+10;
+  const max=Math.max(...rows.map(r=>r.amt))||1;
+  const LW=120, PR=110;
+  const svg=svgEl('svg',{width:'100%',height:H,viewBox:`0 0 ${W} ${H}`});
+  rows.forEach((r,i)=>{
+    const y=i*rowH+8, w=Math.max(2,(W-LW-PR)*r.amt/max);
+    const p=svgEl('path',{d:roundSide(LW,y,w,26,4,true,true),fill:ORD[i]});
+    p.style.cursor='pointer';
+    p.addEventListener('mousemove',e=>showTip(e,
+      `<div class="th">${esc(r.name)}</div><div class="tr"><span>商机金额</span><b>${fmtY(r.amt)}</b></div>`+
+      `<div class="tr"><span>商机数</span><b>${r.n} 个</b></div>`));
+    p.addEventListener('mouseleave',hideTip);
+    svg.appendChild(p);
+    const t=svgEl('text',{x:LW-12,y:y+18,'text-anchor':'end',fill:CV('--tx2'),'font-size':12.5});
+    t.textContent=r.name; svg.appendChild(t);
+    const v=svgEl('text',{x:LW+w+10,y:y+18,fill:CV('--tx3'),'font-size':11.5,
+      'font-variant-numeric':'tabular-nums'});
+    v.textContent=`${fmtY(r.amt)} · ${r.n}个`; svg.appendChild(v);
+  });
+  host.appendChild(svg);
+}
+
+/* 表格视图开关（每张图都有等价表格） */
+function tableToggle(id){
+  const el=document.getElementById(id); el.classList.toggle('on');
+  event.target.textContent = el.classList.contains('on') ? '隐藏数据表' : '查看数据表';
+}
+
+/* ==========================================================================
+   4. 视图层
+   ========================================================================== */
+const MENU=[
+  {k:'dash', i:'▤', n:'总览看板'},
+  {k:'cust', i:'◧', n:'客户管理'},
+  {k:'pipe', i:'▽', n:'商机漏斗'},
+  {k:'ord',  i:'≡', n:'订单与充值'},
+  {k:'calc', i:'∑', n:'毛利测算器'},
+  {k:'agent',i:'⇄', n:'代理商分润'},
+  {k:'price',i:'¥', n:'上游价格表'},
+  {k:'data', i:'⇩', n:'数据管理'}
+];
+let VIEW='dash';
+const KICKER={dash:'Overview',cust:'Customers',pipe:'Pipeline',ord:'Orders',
+  calc:'Unit Economics',agent:'Channel',price:'Upstream Pricing',data:'Data'};
+const FOOT=`<div id="pfoot">
+  <span><b>上海火棘果数字科技有限公司</b> · SpaceTiD<br>
+    电话 021-80411593 ｜ 邮箱 official@spacetid.com</span>
+  <span style="text-align:right">业务管理台 v1.0 · 内部机密，含成本与毛利数据，请勿外传<br>
+    沪ICP备2023030137号-1</span></div>`;
+document.getElementById('menu').innerHTML = MENU.map(m=>
+  `<div class="mi" data-k="${m.k}" onclick="go('${m.k}')"><i>${m.i}</i>${m.n}</div>`).join('');
+
+function go(k){ VIEW=k; render(); }
+function render(){
+  document.querySelectorAll('.mi').forEach(e=>e.classList.toggle('on', e.dataset.k===VIEW));
+  const box = document.getElementById('content');
+  box.innerHTML = ({
+    dash:vDash, cust:vCust, pipe:vPipe, ord:vOrd, calc:vCalc,
+    agent:vAgent, price:vPrice, data:vData
+  })[VIEW]();
+  // 把页面标题与副标题提升到品牌 Hero 带中
+  const t = box.querySelector('h2.page'), sub = box.querySelector('p.sub');
+  document.getElementById('htitle').textContent = t ? t.textContent : '';
+  document.getElementById('hsub').textContent   = sub ? sub.textContent : '';
+  document.getElementById('hkick').textContent  = (KICKER[VIEW]||'Operations Console');
+  if(t) t.remove(); if(sub) sub.remove();
+  box.insertAdjacentHTML('beforeend', FOOT);
+  window.scrollTo(0,0);
+  if(VIEW==='dash') drawDash();
+  if(VIEW==='pipe') drawPipe();
+  if(VIEW==='calc') calc();
+}
+
+/* ---------- 总览看板 ---------- */
+function vDash(){
+  const t=totals(), rs=risks();
+  const revS = t.series.map(s=>s.rev);
+  const gmS  = t.series.map(s=>s.rev? s.gross/s.rev : 0);
+  const grow = revS.length>1 && revS[revS.length-2] ? (revS[revS.length-1]/revS[revS.length-2]-1) : 0;
+  const structItems = Object.keys(CT).map(k=>({name:CT[k],v:t.byType[k],color:CT_COLOR[k]}));
+  const h = health(t.cmr);
+  return `
+  <h2 class="page">总览看板</h2>
+  <p class="sub">当期口径：${DB.months[DB.months.length-1]} · 活跃客户 ${DB.customers.length} 家 · 数据更新 ${DB.meta.updated}</p>
+
+  <div class="grid g4" style="margin-bottom:16px">
+    <div class="tile"><div class="lbl">当月收入</div><div class="val">${fmtY(t.rev)}</div>
+      <div class="dl"><span class="${grow>=0?'up':'down'}">${grow>=0?'↑':'↓'} ${pct(Math.abs(grow))}</span> 环比上月</div>
+      ${spark(revS,'--s1')}</div>
+    <div class="tile"><div class="lbl">综合毛利</div><div class="val">${fmtY(t.gross)}<small>${pct(t.gm)}</small></div>
+      <div class="dl">采购成本 ${fmtY(t.cost)}</div>${spark(gmS,'--s2')}</div>
+    <div class="tile"><div class="lbl">贡献毛利</div><div class="val">${fmtY(t.cm)}<small>${pct(t.cmr)}</small></div>
+      <div class="dl">已扣技术 ${pct(DB.meta.techRate)} / 服务 / 风险 ${pct(DB.meta.riskRate)}</div>
+      <div style="margin-top:9px"><span class="chip ${h.cls}"><span class="dot"></span>整体${h.k}</span></div></div>
+    <div class="tile"><div class="lbl">风险预警</div><div class="val">${rs.length}<small>条</small></div>
+      <div class="dl">严重 ${rs.filter(r=>r.lv==='crit').length} · 重要 ${rs.filter(r=>r.lv==='serious').length} · 提示 ${rs.filter(r=>r.lv==='warn').length}</div>
+      <div style="margin-top:9px"><button class="btn sm" onclick="document.getElementById('riskcard').scrollIntoView({behavior:'smooth'})">查看明细</button></div></div>
+  </div>
+
+  <div class="card">
+    <h3>收入构成趋势</h3>
+    <p class="cap">堆叠高度为当月收入，青色为采购成本，橙色为毛利。纯转售的毛利水位结构性偏薄（见知识库模块 04）。</p>
+    <div class="legend">
+      <span><i style="background:var(--s1)"></i>采购成本</span>
+      <span><i style="background:var(--s2)"></i>毛利</span>
+    </div>
+    <div class="chartbox" id="ch1"></div>
+    <button class="tglt" onclick="tableToggle('tv1')">查看数据表</button>
+    <div class="tvw" id="tv1"><div class="tw"><table><thead><tr><th>月份</th><th class="num">收入</th>
+      <th class="num">采购成本</th><th class="num">毛利</th><th class="num">毛利率</th></tr></thead><tbody>
+      ${t.series.map(s=>`<tr><td>${s.m}</td><td class="num">${fmtY(s.rev)}</td><td class="num">${fmtY(s.cost)}</td>
+      <td class="num"><b>${fmtY(s.gross)}</b></td><td class="num">${pct(s.rev?s.gross/s.rev:0)}</td></tr>`).join('')}
+    </tbody></table></div></div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>毛利率走势</h3>
+      <p class="cap">与收入分离作图 —— 两者量纲不同，不使用双轴。</p>
+      <div class="chartbox" id="ch2"></div>
+    </div>
+    <div class="card">
+      <h3>客户结构占比</h3>
+      <p class="cap">任一类型收入占比超过 40% 即触发结构失衡预警。</p>
+      <div class="legend">${structItems.map(s=>`<span><i style="background:var(--${s.color.slice(2)})"></i>${s.name}</span>`).join('')}</div>
+      <div class="chartbox" id="ch3"></div>
+      <button class="tglt" onclick="tableToggle('tv3')">查看数据表</button>
+      <div class="tvw" id="tv3"><table><thead><tr><th>客户类型</th><th class="num">收入</th><th class="num">占比</th></tr></thead><tbody>
+      ${structItems.map(s=>`<tr><td>${s.name}</td><td class="num">${fmtY(s.v)}</td>
+        <td class="num">${pct(t.rev?s.v/t.rev:0)}</td></tr>`).join('')}</tbody></table></div>
+    </div>
+  </div>
+
+  <div class="card" id="riskcard">
+    <h3>风险预警</h3>
+    <p class="cap">按知识库模块 04 / 05 / 07 的红线自动扫描，每条附处置建议。</p>
+    ${rs.length? rs.map(r=>`
+      <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)">
+        <span class="chip ${r.lv==='crit'?'crit':r.lv==='serious'?'serious':'warn'}"><span class="dot"></span>${
+          r.lv==='crit'?'严重':r.lv==='serious'?'重要':'提示'}</span>
+        <div style="flex:1"><b>${esc(r.t)}</b><div style="color:var(--tx3);font-size:12.5px">${esc(r.d)}</div></div>
+      </div>`).join('') : '<div class="empty">当前无预警</div>'}
+  </div>`;
+}
+function drawDash(){
+  const t=totals();
+  stackedColumn(document.getElementById('ch1'), t.series,
+    [{key:'cost',name:'采购成本',color:'--s1'},{key:'gross',name:'毛利',color:'--s2'}]);
+  lineChart(document.getElementById('ch2'),
+    t.series.map(s=>({m:s.m, r: s.rev? s.gross/s.rev : 0})), 'r', '--s2', v=>pct(v));
+  stackedBarH(document.getElementById('ch3'),
+    Object.keys(CT).map(k=>({name:CT[k],v:t.byType[k],color:CT_COLOR[k]})), t.rev);
+}
+
+/* ---------- 客户管理 ---------- */
+function vCust(){
+  const t=totals();
+  const rows = DB.customers.map(c=>{
+    const k=contrib(c), h=health(k.cmr);
+    return {c,k,h};
+  }).sort((a,b)=>b.c.rev-a.c.rev);
+  return `
+  <h2 class="page">客户管理</h2>
+  <p class="sub">贡献毛利 = 订单毛利 − 技术成本 − 服务成本 − 风险计提；健康度分级见知识库模块 04</p>
+  <div class="bar">
+    <button class="btn pri" onclick="addCust()">+ 新增客户</button>
+    <span class="sp"></span>
+    <span style="color:var(--tx3);font-size:12.5px">合计收入 ${fmtY(t.rev)} · 合计贡献毛利 ${fmtY(t.cm)}（${pct(t.cmr)}）</span>
+  </div>
+  <div class="card" style="padding:6px 0 0"><div class="tw"><table>
+    <thead><tr><th>客户</th><th>类型</th><th>场景</th><th class="num">月收入</th><th class="num">采购成本</th>
+      <th class="num">毛利率</th><th>服务强度</th><th class="num">贡献毛利</th><th class="num">贡献毛利率</th>
+      <th>健康度</th><th>负责人</th><th></th></tr></thead>
+    <tbody>${rows.map(({c,k,h})=>`<tr>
+      <td><b>${esc(c.name)}</b><div style="font-size:11.5px;color:var(--tx3)">${esc(c.note)}</div></td>
+      <td><span class="chip">${CT[c.type]}</span></td>
+      <td>${esc(c.scene)}</td>
+      <td class="num">${fmtY(c.rev)}</td>
+      <td class="num">${fmtY(c.cost)}</td>
+      <td class="num">${pct(k.gm)}</td>
+      <td>${SI[c.si].n}（${pct(SI[c.si].r)}）</td>
+      <td class="num"><b>${fmtY(k.cm)}</b></td>
+      <td class="num">${pct(k.cmr)}</td>
+      <td><span class="chip ${h.cls}"><span class="dot"></span>${h.k}</span></td>
+      <td>${esc(c.owner)}</td>
+      <td><button class="btn sm" onclick="editCust(${c.id})">编辑</button></td>
+    </tr>`).join('')}</tbody></table></div></div>
+  <div class="note"><b>处置建议：</b>${
+    [...new Set(rows.map(r=>r.h.k+' → '+r.h.act))].join('；')}</div>`;
+}
+function addCust(){
+  const name=prompt('客户名称'); if(!name) return;
+  const rev=+prompt('月收入（元）','30000')||0;
+  const cost=+prompt('月采购成本（元）','26000')||0;
+  DB.customers.push({id:Date.now(),name,type:'startup',scene:'待填写',rev,cost,si:'mid',
+    m:[0,0,0,0,0,rev/1000],owner:'待分配',note:'新建'});
+  render();
+}
+function editCust(id){
+  const c=DB.customers.find(x=>x.id===id); if(!c) return;
+  const rev=prompt(`${c.name} · 月收入（元）`, c.rev); if(rev===null) return;
+  const cost=prompt(`${c.name} · 月采购成本（元）`, c.cost); if(cost===null) return;
+  const si=prompt(`${c.name} · 服务强度 low / mid / high`, c.si);
+  c.rev=+rev||0; c.cost=+cost||0; if(SI[si]) c.si=si;
+  c.m[c.m.length-1]=c.rev/1000;
+  render();
+}
+
+/* ---------- 商机漏斗 ---------- */
+function vPipe(){
+  const byStage = STAGES.map((s,i)=>{
+    const ds=DB.deals.filter(d=>d.stage===i+1);
+    return {name:s, n:ds.length, amt:ds.reduce((a,b)=>a+b.amt,0), ds};
+  });
+  const tot = DB.deals.reduce((a,b)=>a+b.amt,0);
+  return `
+  <h2 class="page">商机漏斗</h2>
+  <p class="sub">阶段划分对应知识库模块 09 的客户全生命周期；每阶段有明确的进入判定标准</p>
+  <div class="grid g3" style="margin-bottom:16px">
+    <div class="tile"><div class="lbl">在途商机总额</div><div class="val">${fmtY(tot)}</div>
+      <div class="dl">${DB.deals.length} 个商机</div></div>
+    <div class="tile"><div class="lbl">POC 及以后</div><div class="val">${fmtY(byStage.slice(2).reduce((a,b)=>a+b.amt,0))}</div>
+      <div class="dl">已完成价值证明，转化概率显著提升</div></div>
+    <div class="tile"><div class="lbl">平均商机金额</div><div class="val">${fmtY(DB.deals.length?tot/DB.deals.length:0)}</div>
+      <div class="dl">年化口径</div></div>
+  </div>
+  <div class="card"><h3>阶段分布</h3>
+    <p class="cap">有序刻度使用单色阶梯，深浅表示阶段推进，不使用分类配色。</p>
+    <div class="chartbox" id="fn"></div>
+    <button class="tglt" onclick="tableToggle('tvf')">查看数据表</button>
+    <div class="tvw" id="tvf"><table><thead><tr><th>阶段</th><th class="num">商机数</th><th class="num">金额</th></tr></thead>
+      <tbody>${byStage.map(s=>`<tr><td>${s.name}</td><td class="num">${s.n}</td><td class="num">${fmtY(s.amt)}</td></tr>`).join('')}</tbody></table></div>
+  </div>
+  <div class="card" style="padding:6px 0 0"><div class="tw"><table>
+    <thead><tr><th>商机</th><th>类型</th><th>阶段</th><th class="num">金额</th><th>负责人</th><th>下一步动作</th></tr></thead>
+    <tbody>${DB.deals.slice().sort((a,b)=>b.stage-a.stage||b.amt-a.amt).map(d=>`<tr>
+      <td><b>${esc(d.name)}</b></td><td><span class="chip">${CT[d.type]}</span></td>
+      <td><span class="chip">${STAGES[d.stage-1]}</span></td>
+      <td class="num">${fmtY(d.amt)}</td><td>${esc(d.owner)}</td>
+      <td style="color:var(--tx3)">${esc(d.next)}</td></tr>`).join('')}</tbody></table></div></div>`;
+}
+function drawPipe(){
+  const rows = STAGES.map((s,i)=>{
+    const ds=DB.deals.filter(d=>d.stage===i+1);
+    return {name:s,n:ds.length,amt:ds.reduce((a,b)=>a+b.amt,0)};
+  });
+  funnel(document.getElementById('fn'), rows);
+}
+
+/* ---------- 订单与充值 ---------- */
+function vOrd(){
+  const tot=DB.orders.reduce((a,b)=>a+b.amt,0);
+  const wait=DB.orders.filter(o=>o.inv==='待开');
+  return `
+  <h2 class="page">订单与充值</h2>
+  <p class="sub">客户预付款须与运营资金分账管理，不得挪用（知识库模块 08）</p>
+  <div class="grid g3" style="margin-bottom:16px">
+    <div class="tile"><div class="lbl">本月回款</div><div class="val">${fmtY(tot)}</div>
+      <div class="dl">${DB.orders.length} 笔</div></div>
+    <div class="tile"><div class="lbl">待开票</div><div class="val">${wait.length}<small>笔</small></div>
+      <div class="dl">${fmtY(wait.reduce((a,b)=>a+b.amt,0))}</div></div>
+    <div class="tile"><div class="lbl">代理进货占比</div>
+      <div class="val">${pct(tot?DB.orders.filter(o=>o.type==='代理进货').reduce((a,b)=>a+b.amt,0)/tot:0)}</div>
+      <div class="dl">渠道贡献</div></div>
+  </div>
+  <div class="bar"><button class="btn pri" onclick="addOrder()">+ 登记收款</button></div>
+  <div class="card" style="padding:6px 0 0"><div class="tw"><table>
+    <thead><tr><th>单号</th><th>客户</th><th>日期</th><th class="num">金额</th><th>类型</th><th>付款方式</th><th>发票</th></tr></thead>
+    <tbody>${DB.orders.map(o=>`<tr><td class="mono">${esc(o.id)}</td><td><b>${esc(o.cust)}</b></td>
+      <td class="mono">${o.date}</td><td class="num"><b>${fmtY(o.amt)}</b></td>
+      <td><span class="chip">${o.type}</span></td><td>${o.pay}</td>
+      <td>${o.inv==='待开'?'<span class="chip warn"><span class="dot"></span>待开</span>':o.inv}</td></tr>`).join('')}
+    </tbody></table></div></div>`;
+}
+function addOrder(){
+  const cust=prompt('客户名称'); if(!cust) return;
+  const amt=+prompt('金额（元）','50000')||0;
+  const d=new Date().toISOString().slice(0,10);
+  DB.orders.unshift({id:'R'+d.slice(2,4)+d.slice(5,7)+'-'+String(Math.floor(Math.random()*900+100)),
+    cust,date:d,amt,type:'充值',pay:'对公转账',inv:'待开'});
+  render();
+}
+
+/* ---------- 毛利测算器 ---------- */
+function vCalc(){
+  return `
+  <h2 class="page">毛利测算器</h2>
+  <p class="sub">按输入 / 输出 / 缓存三类 token 分别计价 —— 输出价通常是输入价的 3–4 倍，用平均价估算误差可达数倍</p>
+  <div class="grid g2">
+    <div class="card">
+      <h3>测算输入</h3>
+      <p class="cap">选择模型自动带入官方参考价，也可手工覆盖。</p>
+      <div class="fr"><label class="f">模型</label>
+        <select class="f" id="cm" onchange="pickModel()">
+          ${DB.models.map(m=>`<option value="${m.id}">${m.name} · ${m.vendor}</option>`).join('')}
+        </select></div>
+      <div class="grid g3">
+        <div class="fr"><label class="f">输入 token（百万）</label><input class="f" id="ti" value="30000" oninput="calc()"></div>
+        <div class="fr"><label class="f">输出 token（百万）</label><input class="f" id="to" value="10000" oninput="calc()"></div>
+        <div class="fr"><label class="f">缓存命中（百万）</label><input class="f" id="tc" value="6000" oninput="calc()"></div>
+      </div>
+      <div class="grid g3">
+        <div class="fr"><label class="f">官方输入价 元/M</label><input class="f" id="pi" value="0.5" oninput="calc()"></div>
+        <div class="fr"><label class="f">官方输出价 元/M</label><input class="f" id="po" value="2" oninput="calc()"></div>
+        <div class="fr"><label class="f">官方缓存价 元/M</label><input class="f" id="pc" value="0.1" oninput="calc()"></div>
+      </div>
+      <div class="grid g2">
+        <div class="fr"><label class="f">对客折扣（占官方价）</label><input class="f" id="ds" value="0.92" oninput="calc()"></div>
+        <div class="fr"><label class="f">我方采购折扣</label><input class="f" id="db" value="0.80" oninput="calc()"></div>
+      </div>
+      <div class="grid g3">
+        <div class="fr"><label class="f">服务强度</label>
+          <select class="f" id="si" onchange="calc()">
+            <option value="low">低（1%）</option><option value="mid" selected>中（5%）</option><option value="high">高（15%）</option>
+          </select></div>
+        <div class="fr"><label class="f">技术成本率</label><input class="f" id="tr" value="0.03" oninput="calc()"></div>
+        <div class="fr"><label class="f">风险计提率</label><input class="f" id="rr" value="0.02" oninput="calc()"></div>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h3>测算结果</h3>
+        <p class="cap">贡献毛利率决定客户健康度分级与报价审批层级。</p>
+        <div id="out"></div>
+      </div>
+      <div class="card">
+        <h3>增值服务叠加</h3>
+        <p class="cap">按帮客户节省金额分成 —— 这是把薄毛利订单拉回健康区间的主要杠杆。</p>
+        <div class="grid g2">
+          <div class="fr"><label class="f">预计月节省（元）</label><input class="f" id="sv" value="0" oninput="calc()"></div>
+          <div class="fr"><label class="f">分成比例</label><input class="f" id="sr" value="0.20" oninput="calc()"></div>
+        </div>
+        <div id="out2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="note"><b>使用提醒：</b>官方价格变动频繁，采集日 ${DB.meta.updated}。超过 30 天未复核的价格默认视为过期，报价前请核对官网。</div>`;
+}
+function pickModel(){
+  const m=DB.models.find(x=>x.id===document.getElementById('cm').value); if(!m) return;
+  document.getElementById('pi').value=m.pin;
+  document.getElementById('po').value=m.pout;
+  document.getElementById('pc').value=m.pcache;
+  document.getElementById('ds').value=m.sell;
+  document.getElementById('db').value=m.buy;
+  calc();
+}
+function calc(){
+  const g=id=>+document.getElementById(id).value||0;
+  const ti=g('ti'),to=g('to'),tc=g('tc'),pi=g('pi'),po=g('po'),pc=g('pc');
+  const ds=g('ds'),db=g('db'),tr=g('tr'),rr=g('rr');
+  const sir=SI[document.getElementById('si').value].r;
+  const rev  = ti*pi*ds + to*po*ds + tc*pc*ds;
+  const buy  = ti*pi*db + to*po*db + tc*pc*db;
+  const gross= rev-buy;
+  const tech = rev*tr, serv = rev*sir, risk = rev*rr;
+  const cm   = gross-tech-serv-risk;
+  const gmr  = rev? gross/rev : 0, cmr = rev? cm/rev : 0;
+  const h    = health(cmr);
+  const listPrice = ti*pi + to*po + tc*pc;
+  document.getElementById('out').innerHTML = `
+    <div style="margin-bottom:14px"><div style="font-size:12px;color:var(--tx3)">贡献毛利</div>
+      <div class="hero" style="color:${cm>=0?'var(--tx)':'#e97676'}">${fmtY(cm)}</div>
+      <div style="margin-top:6px"><span class="chip ${h.cls}"><span class="dot"></span>${h.k}</span>
+      <span style="color:var(--tx3);font-size:12px;margin-left:8px">${h.act}</span></div></div>
+    <div class="kv"><span>按官方原价计</span><b>${fmtY(listPrice)}</b></div>
+    <div class="kv"><span>对客收入（${pct(ds)} 官方价）</span><b class="big">${fmtY(rev)}</b></div>
+    <div class="kv"><span>采购成本（${pct(db)} 官方价）</span><b>−${fmtY(buy)}</b></div>
+    <div class="kv"><span>订单毛利</span><b class="big">${fmtY(gross)} · ${pct(gmr)}</b></div>
+    <div class="kv"><span>技术成本</span><b>−${fmtY(tech)}</b></div>
+    <div class="kv"><span>服务成本</span><b>−${fmtY(serv)}</b></div>
+    <div class="kv"><span>风险计提</span><b>−${fmtY(risk)}</b></div>
+    <div class="kv"><span>贡献毛利率</span><b class="big" style="color:${cmr>0.03?'#5fd35f':'#e97676'}">${pct(cmr)}</b></div>
+    <div class="kv"><span>报价审批层级</span><b>${approval(gmr)}</b></div>
+    <div class="kv"><span>客户可省（相对官方价）</span><b>${fmtY(listPrice-rev)} · ${pct(listPrice?1-rev/listPrice:0)}</b></div>`;
+  const sv=g('sv'), sr=g('sr'), extra=sv*sr;
+  const cm2=cm+extra, rev2=rev+extra;
+  const h2=health(rev2?cm2/rev2:0);
+  document.getElementById('out2').innerHTML = extra>0 ? `
+    <div class="kv"><span>增值服务收入</span><b>+${fmtY(extra)}</b></div>
+    <div class="kv"><span>叠加后贡献毛利</span><b class="big">${fmtY(cm2)}</b></div>
+    <div class="kv"><span>叠加后贡献毛利率</span><b class="big" style="color:#5fd35f">${pct(rev2?cm2/rev2:0)}</b></div>
+    <div class="kv"><span>健康度变化</span><b><span class="chip ${h.cls}"><span class="dot"></span>${h.k}</span>
+      → <span class="chip ${h2.cls}"><span class="dot"></span>${h2.k}</span></b></div>`
+    : `<div class="empty">填入预计月节省金额，查看增值服务对贡献毛利的拉动效果</div>`;
+}
+
+/* ---------- 代理商分润 ---------- */
+function vAgent(){
+  const tot=DB.agents.reduce((a,b)=>a+b.q,0);
+  return `
+  <h2 class="page">代理商分润</h2>
+  <p class="sub">折扣只随实际采购量兑现，不预支；月结且准时 —— 准时结算的信誉比多给两个点更能留住代理商</p>
+  <div class="grid g3" style="margin-bottom:16px">
+    <div class="tile"><div class="lbl">渠道季度采购</div><div class="val">${fmtY(tot)}</div>
+      <div class="dl">${DB.agents.length} 家代理 · 覆盖 ${DB.agents.reduce((a,b)=>a+b.cust,0)} 个终端客户</div></div>
+    <div class="tile"><div class="lbl">应结分润</div>
+      <div class="val">${fmtY(DB.agents.reduce((a,b)=>a+b.q*b.rate,0))}</div>
+      <div class="dl">下月 5 日前打款</div></div>
+    <div class="tile"><div class="lbl">最大单一代理占比</div>
+      <div class="val">${pct(tot?Math.max(...DB.agents.map(a=>a.q))/tot:0)}</div>
+      <div class="dl">${tot&&Math.max(...DB.agents.map(a=>a.q))/tot>0.2?'<span class="up" style="color:#f6c85a">⚠ 超过 20% 上限</span>':'在 20% 上限内'}</div></div>
+  </div>
+  <div class="card" style="padding:6px 0 0"><div class="tw"><table>
+    <thead><tr><th>代理商</th><th>层级</th><th class="num">季度采购</th><th class="num">占比</th>
+      <th class="num">分润比例</th><th class="num">应结分润</th><th class="num">终端客户</th><th>上次结算</th><th>状态</th></tr></thead>
+    <tbody>${DB.agents.slice().sort((a,b)=>b.q-a.q).map(a=>{
+      const share = tot? a.q/tot : 0;
+      return `<tr><td><b>${esc(a.name)}</b></td><td><span class="chip">${a.tier}</span></td>
+      <td class="num">${fmtY(a.q)}</td>
+      <td class="num">${share>0.2?`<span style="color:#f6c85a">${pct(share)} ⚠</span>`:pct(share)}</td>
+      <td class="num">${pct(a.rate)}</td><td class="num"><b>${fmtY(a.q*a.rate)}</b></td>
+      <td class="num">${a.cust}</td><td class="mono">${a.settled}</td>
+      <td><span class="chip ${a.status==='正常'?'good':'warn'}"><span class="dot"></span>${a.status}</span></td></tr>`;
+    }).join('')}</tbody></table></div></div>
+  <div class="card"><h3>分级政策</h3>
+    <table><thead><tr><th>层级</th><th>准入要求</th><th>权益</th><th>管理动作</th></tr></thead><tbody>
+      <tr><td><b>注册代理</b></td><td>线上注册，无预付</td><td>推荐返佣，返佣期 12 个月</td><td>全自助，管理成本趋零</td></tr>
+      <tr><td><b>授权代理</b></td><td>正式协议 + 预付或年度承诺量 + 资质审核</td><td>阶梯折扣拿货，自主定价</td><td>配备渠道经理，季度评估</td></tr>
+      <tr><td><b>战略伙伴</b></td><td>高预付 + 完整资质与业务尽调</td><td>最深折扣、白标、独立结算、区域/行业保护</td><td>严格控制数量，宁少勿滥</td></tr>
+    </tbody></table>
+    <div class="note"><b>红线：</b>任何层级的折扣都必须给公司留出不低于 8% 的毛利空间（已扣渠道支持人力成本）；分级需按季度评估且降级必须真的执行，否则会积压只享折扣不产出的僵尸伙伴。</div>
+  </div>`;
+}
+
+/* ---------- 上游价格表 ---------- */
+function vPrice(){
+  return `
+  <h2 class="page">上游价格表</h2>
+  <p class="sub">采集日 ${DB.meta.updated} · 单位：元 / 百万 token · 超过 30 天未复核视为过期</p>
+  <div class="card" style="padding:6px 0 0"><div class="tw"><table>
+    <thead><tr><th>模型</th><th>厂商</th><th class="num">官方输入价</th><th class="num">官方输出价</th>
+      <th class="num">缓存价</th><th class="num">采购折扣</th><th class="num">对客折扣</th>
+      <th class="num">理论毛利率</th><th></th></tr></thead>
+    <tbody>${DB.models.map(m=>{
+      const gm = m.sell? (m.sell-m.buy)/m.sell : 0;
+      return `<tr><td><b>${esc(m.name)}</b></td><td>${esc(m.vendor)}</td>
+      <td class="num">${m.pin}</td><td class="num">${m.pout}</td><td class="num">${m.pcache}</td>
+      <td class="num">${pct(m.buy)}</td><td class="num">${pct(m.sell)}</td>
+      <td class="num"><b style="color:${gm>=0.10?'#5fd35f':gm>0?'#f6c85a':'var(--tx3)'}">${pct(gm)}</b></td>
+      <td><button class="btn sm" onclick="editPrice('${m.id}')">改价</button></td></tr>`;
+    }).join('')}</tbody></table></div></div>
+  <div class="note"><b>结构解读：</b>价格带已形成三层结构 —— 0.3–0.8 元的走量层、2–5 元的主力层、5–15 元的旗舰层。
+  免费额度已是标配获客手段，意味着最底层通用问答场景基本没有转售利润，利润必须来自中高层。</div>`;
+}
+function editPrice(id){
+  const m=DB.models.find(x=>x.id===id); if(!m) return;
+  const pin=prompt(`${m.name} 官方输入价 元/M`, m.pin); if(pin===null) return;
+  const pout=prompt(`${m.name} 官方输出价 元/M`, m.pout); if(pout===null) return;
+  const buy=prompt(`${m.name} 我方采购折扣（0-1）`, m.buy);
+  const sell=prompt(`${m.name} 对客折扣（0-1）`, m.sell);
+  m.pin=+pin||0; m.pout=+pout||0;
+  if(buy!==null) m.buy=+buy||m.buy;
+  if(sell!==null) m.sell=+sell||m.sell;
+  DB.meta.updated = new Date().toISOString().slice(0,10);
+  render();
+}
+
+/* ---------- 数据管理 ---------- */
+function vData(){
+  return `
+  <h2 class="page">数据管理</h2>
+  <p class="sub">本工具为单文件原型，数据保存在内存中，刷新即重置。请用导出功能留档。</p>
+  <div class="card">
+    <h3>导出 / 导入</h3>
+    <p class="cap">导出为 JSON 文件；下次打开工具后导入即可恢复。</p>
+    <div class="bar">
+      <button class="btn pri" onclick="expJSON()">导出全部数据（JSON）</button>
+      <button class="btn" onclick="expCSV()">导出客户表（CSV）</button>
+      <button class="btn" onclick="document.getElementById('imp').click()">导入 JSON</button>
+      <input type="file" id="imp" accept=".json" style="display:none" onchange="impJSON(event)">
+      <button class="btn dg" onclick="if(confirm('确定清空所有业务数据？'))resetDB()">清空数据</button>
+    </div>
+  </div>
+  <div class="card">
+    <h3>全局参数</h3>
+    <p class="cap">影响所有贡献毛利与健康度计算。</p>
+    <div class="grid g3">
+      <div class="fr"><label class="f">技术成本率</label>
+        <input class="f" value="${DB.meta.techRate}" onchange="DB.meta.techRate=+this.value||0;render()"></div>
+      <div class="fr"><label class="f">风险计提率</label>
+        <input class="f" value="${DB.meta.riskRate}" onchange="DB.meta.riskRate=+this.value||0;render()"></div>
+      <div class="fr"><label class="f">价格采集日</label>
+        <input class="f" value="${DB.meta.updated}" onchange="DB.meta.updated=this.value;render()"></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>与知识库的对应关系</h3>
+    <table><thead><tr><th>本工具功能</th><th>依据的知识库模块</th></tr></thead><tbody>
+      <tr><td>贡献毛利与健康度分级</td><td>模块 04 · 定价体系与单位经济模型</td></tr>
+      <tr><td>报价审批层级</td><td>模块 04 · 第三节报价审批权限</td></tr>
+      <tr><td>客户结构与集中度预警</td><td>模块 05 · 客户结构健康标准</td></tr>
+      <tr><td>商机阶段划分</td><td>模块 09 · 客户全生命周期六阶段</td></tr>
+      <tr><td>流失预警信号</td><td>模块 09 · 客户流失预警与挽回</td></tr>
+      <tr><td>代理分级与分润红线</td><td>模块 07 · 渠道与代理商体系</td></tr>
+      <tr><td>预付款分账提示</td><td>模块 08 · 合规与风险控制</td></tr>
+    </tbody></table>
+  </div>`;
+}
+function dl(name, content, mime){
+  const b=new Blob([content],{type:mime}); const u=URL.createObjectURL(b);
+  const a=document.createElement('a'); a.href=u; a.download=name; a.click();
+  setTimeout(()=>URL.revokeObjectURL(u),1000);
+}
+function expJSON(){ dl('aitoken-业务数据-'+new Date().toISOString().slice(0,10)+'.json',
+  JSON.stringify(DB,null,2), 'application/json'); }
+function expCSV(){
+  const head=['客户','类型','场景','月收入','采购成本','毛利率','服务强度','贡献毛利','贡献毛利率','健康度','负责人'];
+  const rows=DB.customers.map(c=>{const k=contrib(c);
+    return [c.name,CT[c.type],c.scene,c.rev,c.cost,pct(k.gm),SI[c.si].n,Math.round(k.cm),pct(k.cmr),health(k.cmr).k,c.owner];});
+  dl('客户明细-'+new Date().toISOString().slice(0,10)+'.csv',
+    '﻿'+[head,...rows].map(r=>r.join(',')).join('\n'),'text/csv');
+}
+function impJSON(e){
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=()=>{ try{ const d=JSON.parse(r.result);
+    if(!d.customers) throw 0; DB=d; render(); alert('导入成功'); }
+    catch(_){ alert('文件格式不正确'); } };
+  r.readAsText(f);
+}
+function resetDB(){
+  DB.customers=[]; DB.deals=[]; DB.orders=[]; DB.agents=[]; render();
+}
+
+/* ---------- 启动 ---------- */
+if(location.protocol==='file:') document.getElementById('mark').removeAttribute('href');
+render();
+let rt; addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{
+  if(VIEW==='dash')drawDash(); if(VIEW==='pipe')drawPipe();},180);});
+</script>
+</body>
+</html>
