@@ -1,6 +1,6 @@
 ---
 tags: [Claude, Anthropic, Prompt Engineering, 认证考试]
-sources: [[../raw/claude-architect-exam-notes.pdf]], [[../raw/claude-architect-guide-en.pdf]]
+sources: [[../raw/claude-architect-exam-notes.pdf]], [[../raw/claude-architect-guide-en.pdf]], [[../raw/claude-architect-study-guide.pdf]]
 updated: 2026-08-27
 ---
 

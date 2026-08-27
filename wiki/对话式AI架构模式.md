@@ -1,6 +1,6 @@
 ---
 tags: [Claude, Anthropic, AI Agent, 对话系统, 认证考试]
-sources: [[../raw/claude-architect-guide-en.pdf]]
+sources: [[../raw/claude-architect-guide-en.pdf]], [[../raw/claude-architect-study-guide.pdf]]
 updated: 2026-08-27
 ---
 
