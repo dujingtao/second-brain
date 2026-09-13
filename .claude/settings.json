@@ -8,7 +8,9 @@
       "Bash(git commit *)",
       "Bash(git log *)",
       "Bash(git status)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(pdftotext *)",
+      "Bash(pdftoppm *)"
     ]
   }
 }
